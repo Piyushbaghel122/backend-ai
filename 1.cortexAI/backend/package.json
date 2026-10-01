@@ -1,0 +1,16 @@
+{
+  "name": "cortexai-backend",
+  "version": "1.0.0",
+  "description": "Backend services runner",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix services/auth\" \"npm run dev --prefix services/billing\" \"npm run dev --prefix services/chat\"",
+    "start": "concurrently \"npm start --prefix services/auth\" \"npm start --prefix services/billing\" \"npm start --prefix services/chat\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "firebase": "^12.19.0",
+    "ioredis": "^6.0.0"
+  }
+}
